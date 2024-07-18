@@ -9,9 +9,6 @@ import { products } from "./types/product";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Top Ten</title>
-      </Head>
       <div>
         <Header />
         <div className="px-[90px] py-[48px] max-w-[1440px] mx-auto">
