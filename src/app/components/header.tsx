@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <header>
       <div className="h-[120px] bg-black">
-        <div className="flex items-center justify-between gap-4 bg-black max-w-[1440px] px-[90px] py-[24px] mx-auto">
-          <Image src="/logo.svg" alt="logo" width={100} height={68} />
-          <label className="input input-bordered flex items-center gap-2 w-[651px] h-[57px]">
+        <div className="flex items-center justify-between gap-4 bg-black max-w-[1440px] px-[92px] py-[24px] mx-auto">
+          <Image src="/logo.svg" alt="logo" width={110} height={68} />
+          <label className="input input-bordered flex items-center gap-2 w-[651px] h-[57px] p-[18px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -19,11 +19,17 @@ const Header = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <input type="text" className="grow" placeholder="Search" />
+            <input
+              type="text"
+              className="grow text-[20px] p-[18px] font-bold"
+              placeholder="Search"
+            />
           </label>
           <div className="flex items-center gap-4">
-            <button className="btn btn-ghost text-white">Categories</button>
-            <button className="btn btn-ghost text-white">
+            <button className="btn btn-ghost text-white text-[20px] hover:border-b hover:border-b-blue-500">
+              Categories
+            </button>
+            <button className="btn btn-ghost text-white text-[18px]">
               <Image src="/en.svg" alt="en" width={20} height={20} />
               EN
             </button>
