@@ -39,3 +39,20 @@
     src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Domaine Collection/Test Domaine Display Narrow/test-domaine-display-narrow-medium.woff2') format('woff2');
   }
 }
+
+.star {
+  width: 34px;
+  height: 34px;
+}
+
+.star.full {
+  color: #FF2F00;
+}
+
+.star.fraction {
+  color: #FF2F00;
+}
+
+.star.empty {
+  color: transparent;
+}

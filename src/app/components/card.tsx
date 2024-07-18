@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Product } from "../types/product";
+import Rating from "../utils/rating";
 
 interface CardProps {
   number: number;
@@ -54,7 +55,7 @@ const Card = ({ number, product }: CardProps) => {
                   return (
                     <div key={index} className={index === 3 ? "relative" : ""}>
                       {index === 3 && (
-                        <div className="absolute w-[50px] h-[50px] bg-gray-200 rounded-md px-[15px] py-[20px] font-medium text-gray-400">
+                        <div className="absolute w-[50px] h-[50px] bg-gray-200 rounded-md px-[12px] py-[15px] font-medium text-gray-400">
                           +10
                         </div>
                       )}
@@ -71,27 +72,11 @@ const Card = ({ number, product }: CardProps) => {
               </div>
             </div>
             <div className="space-y-4 text-center">
-              <div className="flex justify-between gap-2 px-[20px]">
-                {Array.from({ length: 4 }).map((_, index) => {
-                  return (
-                    <Image
-                      key={index}
-                      src={`/star.svg`}
-                      alt="star"
-                      width={34}
-                      height={32}
-                    />
-                  );
-                })}
-                <Image
-                  src={`/star-1-3.svg`}
-                  alt="star"
-                  width={32}
-                  height={32}
-                />
+              <div className="px-[20px]">
+                <Rating rating={3.4} />
               </div>
               <div className="font-bold text-[17.5px]">
-                4.3 stars (129 reviews)
+                {3.4} stars (129 reviews)
               </div>
             </div>
             <div className="px-[20px]">
