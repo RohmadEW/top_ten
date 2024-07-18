@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/header";
 import Head from "next/head";
 import Title from "./components/title";
+import LastUpdated from "./components/last_updated";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
         <Header />
         <div className="px-[90px] py-[48px]">
           <Title />
+          <div className="mt-[32px]">
+            <LastUpdated />
+          </div>
         </div>
       </div>
     </div>
