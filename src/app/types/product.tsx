@@ -3,10 +3,12 @@ export interface Product {
   description: string;
   pros: string;
   cons: string;
+  is_best_overall?: boolean;
 }
 
 export const products: Product[] = [
   {
+    is_best_overall: true,
     title: "Minelab Vanquish 440 Metal Detector",
     description:
       "The Minelab Vanquish 440 offers a tremendous amount of functionality for less than the cost of some less powerful VLF detectors. For about $300, it’s a little more expensive than true entry-level models, but it offers a lot of features that enthusiasts look for.",

@@ -20,11 +20,9 @@ export default function Home() {
             <LastUpdated />
           </div>
           <div className="mt-[32px] space-y-4">
-            {
-              products.map((product, index) => {
-                return <Card key={index} product={product} />
-              })
-            }
+            {products.map((product, index) => {
+              return <Card key={index} number={index + 1} product={product} />;
+            })}
           </div>
         </div>
       </div>
