@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Product } from "../types/product";
 import Rating from "../utils/rating";
@@ -73,10 +75,10 @@ const Card = ({ number, product }: CardProps) => {
             </div>
             <div className="space-y-4 text-center">
               <div className="px-[20px]">
-                <Rating rating={3.4} />
+                <Rating productId={product.id} rating={product.rating} />
               </div>
               <div className="font-bold text-[17.5px]">
-                {3.4} stars (129 reviews)
+                {product.rating} stars (129 reviews)
               </div>
             </div>
             <div className="px-[20px]">

@@ -1,12 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
 interface StarProps {
   className?: string;
   clipPathId: string;
+  fractionalPart?: number;
 }
 
-const Star: React.FC<StarProps> = ({ className, clipPathId }) => {
+const Star: React.FC<StarProps> = ({
+  className,
+  clipPathId,
+  fractionalPart,
+}) => {
+  const width = fractionalPart ? fractionalPart * 100 : 100;
+
   return (
     <div className="relative">
       <Image
@@ -26,7 +35,7 @@ const Star: React.FC<StarProps> = ({ className, clipPathId }) => {
       >
         <defs>
           <clipPath id={clipPathId}>
-            <rect x="0" y="0" width="100%" height="100%" />
+            <rect x="0" y="0" width={`${width}%`} height="100%" />
           </clipPath>
         </defs>
         <path

@@ -1,11 +1,14 @@
+"use client";
+
 import React from "react";
 import Star from "./star";
 
 interface RatingProps {
+  productId: number;
   rating: number;
 }
 
-const Rating: React.FC<RatingProps> = ({ rating }) => {
+const Rating: React.FC<RatingProps> = ({ productId, rating }) => {
   const fullStars = Math.floor(rating);
   const fractionalPart = rating - fullStars;
   const emptyStars = 5 - fullStars - (fractionalPart > 0 ? 1 : 0);
@@ -16,7 +19,11 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
         <Star key={index} className="star full" clipPathId={`full-${index}`} />
       ))}
       {fractionalPart > 0 && (
-        <Star className="star fraction" clipPathId="fraction" />
+        <Star
+          className="star fraction"
+          clipPathId={`fractional-${productId}`}
+          fractionalPart={fractionalPart}
+        />
       )}
       {[...Array(emptyStars)].map((_, index) => (
         <Star
@@ -25,11 +32,6 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
           clipPathId={`empty-${index}`}
         />
       ))}
-      <style>{`
-        .star.fraction {
-          clip-path: inset(0 ${(1 - fractionalPart) * 100}% 0 0);
-        }
-      `}</style>
     </div>
   );
 };
