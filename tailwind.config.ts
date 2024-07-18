@@ -9,7 +9,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      app: ['Founders-Grotesk', 'sans-serif'],
+      sans: ['Founders-Grotesk', 'sans-serif'],
+      serif: ['Founders-Grotesk', 'sans-serif'],
       domaine: ['Domaine-Display', 'sans-serif'],
     },
     extend: {

@@ -10,26 +10,33 @@ const Card = ({ product }: CardProps) => {
     <div className="bg-[#F9F6F2] rounded-[48px]">
       <div className="px-[66px] pt-[111px] pb-[40px]">
         <div className="flex gap-4">
-          <div className="space-y-8">
+          <div className="space-y-12">
             <div className="space-y-4">
               <div className="bg-white rounded-md">
                 <Image
                   src="/product.png"
                   alt="product"
-                  width={400}
-                  height={400}
+                  width={800}
+                  height={800}
                 />
               </div>
               <div className="flex gap-2">
                 {Array.from({ length: 4 }).map((_, index) => {
                   return (
-                    <Image
-                      key={index}
-                      src={`/product-${index + 1}.png`}
-                      alt="Product"
-                      width={26}
-                      height={26}
-                    />
+                    <div key={index} className={index === 3 ? "relative" : ""}>
+                      {index === 3 && (
+                        <div className="absolute w-[60px] h-[60px] bg-gray-200 rounded-md px-[15px] py-[20px] font-medium text-gray-400">
+                          +10
+                        </div>
+                      )}
+                      <Image
+                        src={`/product-${index + 1}.png`}
+                        alt="Product"
+                        width={60}
+                        height={60}
+                        className="rounded-md"
+                      />
+                    </div>
                   );
                 })}
               </div>
@@ -60,10 +67,8 @@ const Card = ({ product }: CardProps) => {
             </h2>
             <p className="text-[20px]">{product.description}</p>
             <div className="flex gap-2">
-              <button className="btn btn-sm btn-warning">View on Amazon</button>
-              <button className="btn btn-sm btn-primary">
-                View on Walmart
-              </button>
+              <button className="btn btn-warning">View on Amazon</button>
+              <button className="btn btn-primary">View on Walmart</button>
             </div>
             <div className="bg-white border border-[#DCDCCBB2] rounded-[23px] p-[24px]">
               <div className="font-bold text-[24px]">+ Pros</div>

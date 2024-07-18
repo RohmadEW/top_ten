@@ -22,10 +22,8 @@ const Header = () => {
             <input type="text" className="grow" placeholder="Search" />
           </label>
           <div className="flex items-center gap-4">
-            <button className="btn btn-sm btn-ghost text-white">
-              Categories
-            </button>
-            <button className="btn btn-sm btn-ghost text-white">
+            <button className="btn btn-ghost text-white">Categories</button>
+            <button className="btn btn-ghost text-white">
               <Image src="/en.svg" alt="en" width={20} height={20} />
               EN
             </button>
