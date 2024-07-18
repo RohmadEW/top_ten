@@ -12,9 +12,9 @@ export default function Home() {
       <Head>
         <title>Top Ten</title>
       </Head>
-      <div className="max-w-[1440px]">
+      <div>
         <Header />
-        <div className="px-[90px] py-[48px]">
+        <div className="px-[90px] py-[48px] max-w-[1440px] mx-auto">
           <Title />
           <div className="mt-[32px]">
             <LastUpdated />

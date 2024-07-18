@@ -3,8 +3,8 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header>
-      <div className="h-[120px]">
-        <div className="flex items-center justify-between gap-4 bg-black max-w-[1440px] px-[90px] py-[24px]">
+      <div className="h-[120px] bg-black">
+        <div className="flex items-center justify-between gap-4 bg-black max-w-[1440px] px-[90px] py-[24px] mx-auto">
           <Image src="/logo.svg" alt="logo" width={100} height={68} />
           <label className="input input-bordered flex items-center gap-2 w-[651px] h-[57px]">
             <svg
