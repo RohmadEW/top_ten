@@ -36,7 +36,7 @@ const Card = ({ number, product }: CardProps) => {
         </div>
       </div>
       <div className="px-[66px] pt-[111px] pb-[40px]">
-        <div className="flex gap-4">
+        <div className="flex gap-8">
           <div className="space-y-12">
             <div className="space-y-4">
               <div className="bg-white rounded-md">
