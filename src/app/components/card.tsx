@@ -20,7 +20,7 @@ const Card = ({ product }: CardProps) => {
                   height={800}
                 />
               </div>
-              <div className="flex gap-2">
+              <div className="flex justify-between gap-2">
                 {Array.from({ length: 4 }).map((_, index) => {
                   return (
                     <div key={index} className={index === 3 ? "relative" : ""}>
@@ -41,23 +41,29 @@ const Card = ({ product }: CardProps) => {
                 })}
               </div>
             </div>
-            <div className="space-y-4">
-              <div className="flex gap-2">
-                {Array.from({ length: 5 }).map((_, index) => {
+            <div className="space-y-4 px-[20px] text-center">
+              <div className="flex justify-between gap-2">
+                {Array.from({ length: 4 }).map((_, index) => {
                   return (
                     <Image
                       key={index}
                       src={`/star.svg`}
                       alt="star"
-                      width={26}
-                      height={26}
+                      width={32}
+                      height={32}
                     />
                   );
                 })}
+                <Image
+                  src={`/star-1-3.svg`}
+                  alt="star"
+                  width={32}
+                  height={32}
+                />
               </div>
               <div className="font-bold">4.3 stars (129 reviews)</div>
             </div>
-            <button className="btn w-full rounded-full btn-outline btn-sm text-orange-600 border-orange-600">
+            <button className="btn w-full rounded-full btn-outline text-orange-600 border-orange-600">
               Copy Link
             </button>
           </div>
