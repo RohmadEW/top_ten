@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Founders-Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Founders Grotesk Collection/Test Founders Grotesk/test-founders-grotesk-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Domaine-Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Domaine Collection/Test Domaine Display/test-domaine-display-regular.woff2') format('woff2');
+  }
+}
