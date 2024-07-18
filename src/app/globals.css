@@ -8,13 +8,34 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Founders Grotesk Collection/Test Founders Grotesk/test-founders-grotesk-regular.woff2') format('woff2');
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Founders Grotesk Collection/Test Founders Grotesk Text/test-founders-grotesk-text-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Founders-Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Founders Grotesk Collection/Test Founders Grotesk Text/test-founders-grotesk-text-medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Founders-Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Founders Grotesk Collection/Test Founders Grotesk Text/test-founders-grotesk-text-bold.woff2') format('woff2');
   }
   @font-face {
     font-family: 'Domaine-Display';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Domaine Collection/Test Domaine Display/test-domaine-display-regular.woff2') format('woff2');
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Domaine Collection/Test Domaine Display Narrow/test-domaine-display-narrow-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Domaine-Display';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/KlimTestFonts/Test web fonts (WOFF2)/Test Domaine Collection/Test Domaine Display Narrow/test-domaine-display-narrow-medium.woff2') format('woff2');
   }
 }

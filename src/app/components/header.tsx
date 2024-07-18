@@ -26,10 +26,10 @@ const Header = () => {
             />
           </label>
           <div className="flex items-center gap-4">
-            <button className="btn btn-ghost text-white text-[20px] hover:border-b hover:border-b-blue-500">
+            <button className="btn btn-ghost text-white text-[18px] hover:border-b hover:border-b-blue-500">
               Categories
             </button>
-            <button className="btn btn-ghost text-white text-[18px]">
+            <button className="btn btn-ghost text-white text-[16px]">
               <Image src="/en.svg" alt="en" width={20} height={20} />
               EN
             </button>

@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <div>
         <Header />
-        <div className="px-[90px] py-[48px] max-w-[1440px] mx-auto">
+        <div className="pl-[90px] pr-[82px] py-[48px] max-w-[1440px] mx-auto">
           <Title />
           <div className="mt-[32px]">
             <LastUpdated />
