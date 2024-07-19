@@ -1,7 +1,7 @@
 const Title = () => {
   return (
     <div className="max-w-[1000px]">
-      <div className="text-[64px] font-domaine font-medium tracking-tight text-black">
+      <div className="text-[64px] font-domaine font-medium tracking-[-0.01em] text-black">
         Best Metal Detectors for Beginners
       </div>
       <div className="text-[24px]">
