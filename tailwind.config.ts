@@ -9,9 +9,17 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Founders-Grotesk', 'sans-serif'],
-      serif: ['Founders-Grotesk', 'sans-serif'],
-      domaine: ['Domaine-Display', 'sans-serif'],
+      sans: ["Founders-Grotesk", "sans-serif"],
+      serif: ["Founders-Grotesk", "sans-serif"],
+      domaine: ["Domaine-Display", "sans-serif"],
+    },
+    letterSpacing: {
+      tighter: "-0.05em",
+      tight: "-0.025em",
+      normal: "-0.01em",
+      wide: "0.025em",
+      wider: "0.05em",
+      widest: "0.1em",
     },
     extend: {
       backgroundImage: {

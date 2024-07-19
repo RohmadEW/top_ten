@@ -97,17 +97,25 @@ const Card = ({ number, product }: CardProps) => {
               <button className="btn btn-warning font-medium text-[20px]">
                 View on Amazon
               </button>
-              <button className="btn btn-primary font-medium text-[20px] text-white">
+              <button className="btn btn-primary font-medium text-[20px] text-white bg-[#0171DC] border-[#0171DC]">
                 View on Walmart
               </button>
             </div>
             <div className="bg-white border border-[#DCDCCBB2] rounded-[23px] p-[24px] spacey-[14px]">
               <div className="font-bold text-[24px]">+ Pros</div>
-              <div className="text-[18px]">{product.pros}</div>
+              <div className="text-[18px]">
+                {product.pros.map((it, index) => (
+                  <div key={index}>{it}</div>
+                ))}
+              </div>
             </div>
             <div className="bg-white border border-[#DCDCCBB2] rounded-[23px] p-[24px]">
               <div className="font-bold text-[24px]">+ Cons</div>
-              <div className="text-[18px]">{product.cons}</div>
+              <div className="text-[18px]">
+                {product.cons.map((it, index) => (
+                  <div key={index}>{it}</div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
