@@ -1,25 +1,26 @@
-import Image from "next/image";
-import Header from "./components/header";
-import Head from "next/head";
-import Title from "./components/title";
-import LastUpdated from "./components/last_updated";
-import Card from "./components/card";
-import { products } from "../types/product";
+import ProductList from "@/app/components/ProductList";
+import { useProducts } from "@/hooks/useProducts";
+import Header from "./components/Header";
+import LastUpdated from "./components/LastUpdated";
+import Title from "./components/Title";
 
 export default function Home() {
+  const { data, isLoading } = useProducts();
+
   return (
     <div>
       <div>
         <Header />
         <div className="pl-[90px] pr-[82px] py-[48px] max-w-[1440px] mx-auto">
-          <Title />
+          <Title
+            title={data?.title ?? ""}
+            description={data?.description ?? ""}
+          />
           <div className="mt-[32px]">
             <LastUpdated />
           </div>
           <div className="mt-[32px] space-y-4">
-            {products.map((product, index) => {
-              return <Card key={index} number={index + 1} product={product} />;
-            })}
+            <ProductList products={data?.products ?? []} />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ interface CardProps {
   product: Product;
 }
 
-const Card = ({ number, product }: CardProps) => {
+export const CardProduct = ({ number, product }: CardProps) => {
   return (
     <div className="bg-[#F9F6F2] rounded-[48px] relative">
       <div className="absolute w-full top-0 px-[66px]">
@@ -75,10 +75,10 @@ const Card = ({ number, product }: CardProps) => {
             </div>
             <div className="space-y-4 text-center">
               <div className="px-[20px]">
-                <Rating productId={product.id} rating={product.rating} />
+                <Rating productId={product._id} rating={product.stars} />
               </div>
               <div className="font-bold text-[17.5px]">
-                {product.rating} stars (129 reviews)
+                {product.stars} stars (129 reviews)
               </div>
             </div>
             <div className="px-[20px]">
@@ -90,7 +90,7 @@ const Card = ({ number, product }: CardProps) => {
           </div>
           <div className="space-y-4">
             <h2 className="font-medium font-app text-[40px]">
-              {product.title}
+              {product.productName}
             </h2>
             <p className="text-[20px]">{product.description}</p>
             <div className="flex gap-2">
@@ -103,19 +103,11 @@ const Card = ({ number, product }: CardProps) => {
             </div>
             <div className="bg-white border border-[#DCDCCBB2] rounded-[23px] p-[24px] spacey-[14px]">
               <div className="font-bold text-[24px]">+ Pros</div>
-              <div className="text-[18px]">
-                {product.pros.map((it, index) => (
-                  <div key={index}>{it}</div>
-                ))}
-              </div>
+              <div className="text-[18px]">{product.pros}</div>
             </div>
             <div className="bg-white border border-[#DCDCCBB2] rounded-[23px] p-[24px]">
               <div className="font-bold text-[24px]">+ Cons</div>
-              <div className="text-[18px]">
-                {product.cons.map((it, index) => (
-                  <div key={index}>{it}</div>
-                ))}
-              </div>
+              <div className="text-[18px]">{product.cons}</div>
             </div>
           </div>
         </div>
@@ -123,5 +115,3 @@ const Card = ({ number, product }: CardProps) => {
     </div>
   );
 };
-
-export default Card;
