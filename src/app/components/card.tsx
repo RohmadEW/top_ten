@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Product } from "../types/product";
-import Rating from "../utils/rating";
+import { Product } from "../../types/product";
+import Rating from "../../utils/rating";
 
 interface CardProps {
   number: number;

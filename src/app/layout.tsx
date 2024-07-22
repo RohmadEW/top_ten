@@ -1,7 +1,7 @@
 "use client";
 
+import { ProductProvider } from "@/contexts/products";
 import "./globals.css";
-import { ProductProvider } from "./contexts/products";
 
 export default function RootLayout({
   children,

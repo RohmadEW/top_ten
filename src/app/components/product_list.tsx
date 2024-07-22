@@ -1,7 +1,7 @@
 "use client";
 
+import { useProducts } from "@/contexts/products";
 import Card from "./card";
-import { useProducts } from "../contexts/products";
 
 const ProductList = () => {
   const products = useProducts();

@@ -1,5 +1,6 @@
 "use client";
 
+import { Product, products as initialProducts } from "@/types/product";
 import React, {
   createContext,
   useContext,
@@ -7,7 +8,6 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-import { Product, products as initialProducts } from "../types/product";
 
 const ProductContext = createContext<Product[]>([]);
 

@@ -4,7 +4,7 @@ import Head from "next/head";
 import Title from "./components/title";
 import LastUpdated from "./components/last_updated";
 import Card from "./components/card";
-import { products } from "./types/product";
+import { products } from "../types/product";
 
 export default function Home() {
   return (
