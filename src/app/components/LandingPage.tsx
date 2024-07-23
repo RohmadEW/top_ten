@@ -14,11 +14,12 @@ export default function LandingPage() {
       <Header />
       <div className="pl-[90px] pr-[82px] py-[48px] max-w-[1440px] mx-auto">
         <Title
+          isLoading={isLoading}
           title={data?.title ?? ""}
           description={data?.description ?? ""}
         />
         <div className="mt-[32px]">
-          <LastUpdated />
+          <LastUpdated updated_at={data?.updated_at ?? ""} />
         </div>
         <div className="mt-[32px] space-y-4">
           <ProductList products={data?.products ?? []} />

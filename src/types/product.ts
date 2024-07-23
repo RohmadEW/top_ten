@@ -4,8 +4,8 @@ export interface ProductMetaData {
   title: string;
   description: string;
   products: Product[];
-  updated_at: Date;
-  created_at: Date;
+  updated_at: string;
+  created_at: string;
 }
 
 export interface Product {

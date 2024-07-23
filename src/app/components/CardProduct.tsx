@@ -94,9 +94,12 @@ export const CardProduct = ({ number, product }: CardProps) => {
             </h2>
             <p className="text-[20px]">{product.description}</p>
             <div className="flex gap-2">
-              <button className="btn btn-warning font-medium text-[20px]">
+              <a
+                href={product.amazon_link}
+                className="btn btn-warning font-medium text-[20px]"
+              >
                 View on Amazon
-              </button>
+              </a>
               <button className="btn btn-primary font-medium text-[20px] text-white bg-[#0171DC] border-[#0171DC]">
                 View on Walmart
               </button>
