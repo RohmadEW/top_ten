@@ -1,7 +1,5 @@
-"use client";
-
+import { ReactQueryClientProvider } from "@/app/components/ReactQueryClientProvider";
 import "./globals.css";
-import { ProductProvider } from "./contexts/products";
 
 export default function RootLayout({
   children,
@@ -9,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ProductProvider>
+    <ReactQueryClientProvider>
       <html lang="en" data-theme="light">
         <head>
           <title>Top Ten</title>
@@ -17,6 +15,6 @@ export default function RootLayout({
         </head>
         <body>{children}</body>
       </html>
-    </ProductProvider>
+    </ReactQueryClientProvider>
   );
 }

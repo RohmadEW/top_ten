@@ -4,7 +4,7 @@ import React from "react";
 import Star from "./star";
 
 interface RatingProps {
-  productId: number;
+  productId: string;
   rating: number;
 }
 
