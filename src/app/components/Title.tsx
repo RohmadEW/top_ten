@@ -1,5 +1,4 @@
 interface TitleProps {
-  isLoading: boolean;
   title: string;
   description: string;
 }
@@ -12,8 +11,8 @@ const Loading = () => (
   </div>
 );
 
-const Title = ({ isLoading, title, description }: TitleProps) => {
-  if (isLoading) {
+const Title = ({ title, description }: TitleProps) => {
+  if (!title || !description) {
     return <Loading />;
   }
 

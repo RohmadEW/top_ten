@@ -118,3 +118,26 @@ export const CardProduct = ({ number, product }: CardProps) => {
     </div>
   );
 };
+
+export const CardProductLoading = () => {
+  return (
+    <div className="bg-[#F9F6F2] rounded-[48px] relative">
+      <div className="px-[66px] pt-[66px] pb-[40px]">
+        <div className="flex space-x-[40px]">
+          <div className="space-y-4">
+            <div className="skeleton w-[250px] h-[250px]"></div>
+            <div className="skeleton w-[250px] h-[50px]"></div>
+          </div>
+          <div className="space-y-4 w-full">
+            <div className="skeleton w-full h-[75px]"></div>
+            <div className="skeleton w-full h-[30px]"></div>
+            <div className="skeleton w-full h-[30px]"></div>
+            <div className="skeleton w-full h-[30px]"></div>
+            <div className="skeleton w-full h-[30px]"></div>
+            <div className="skeleton w-2/3 h-[30px]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
